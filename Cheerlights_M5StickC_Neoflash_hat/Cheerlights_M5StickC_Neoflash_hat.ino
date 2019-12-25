@@ -22,6 +22,7 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <FastLED.h>
+#include <M5StickC.h>
 
 #define BUILTIN_LED 10
 // Update these with values suitable for your network.
@@ -50,6 +51,7 @@ int value = 0;
 void setup() {
   pinMode(BUILTIN_LED, OUTPUT);     // Initialize the BUILTIN_LED pin as an output
   Serial.begin(115200);
+  M5.begin();
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
