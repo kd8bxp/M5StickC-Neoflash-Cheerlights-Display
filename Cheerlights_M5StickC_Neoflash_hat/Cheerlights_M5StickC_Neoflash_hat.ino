@@ -20,9 +20,9 @@
  */
 
 #include <WiFi.h>
-#include <PubSubClient.h>
-#include <FastLED.h>
-#include <M5StickC.h>
+#include "src/PubSubClient/PubSubClient.h"
+#include "src/FastLED/FastLED.h"
+#include "src/M5StickC/M5StickC.h"
 
 #define BUILTIN_LED 10
 // Update these with values suitable for your network.
